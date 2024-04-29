@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/swap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+
+  </head>
+  <body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="table.html">Book</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="adminlogin.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+
+
+        </div>
+    </section>
+
+    <div style="margin-top:20px;">
+        <button id="t1">show reservation</button>
+        <button id="t2">show food</button>
+        <button id="t3">add food</button>
+        <button id="t4">show tables</button>
+        <button id="t5">add table</button>
+        <button id="t6">Log Out</button>
+    </div>
+
+
+    <div id="res"></div>
+    <div id="food"></div>
+    <div id="add">
+      <form action="./php/upload.php" enctype="multipart/form-data" method="post">
+        <input id="file" type="file" name="file" placeholder="image" required>
+        <input type="text" name="name" placeholder="name" required>
+        <input type="text" name="cat" placeholder="category">
+        <input type="number" step='0.01' name="price" value="0" min='0' required>
+        <button type="submit" name="entry">Add Item</button>
+      </form>
+    </div>
+    <div id="stb"></div>
+    <div id="addt">
+      <form action="./php/addt.php" method="post">
+        <input type="number" name="tn" placeholder="table no" min=0 required>
+        <input type="number" name="ns" placeholder="no of seats" min=1 required>
+        <button type="submit" name="entry">Add Table</button>
+      </form>
+    </div>
+
+  </body>
+  <script src="./js/admincheck.js" async></script>
+  <script src="./js/pannel.js" async></script>
+</html>
